@@ -27,7 +27,7 @@ class CreateDomainIndex extends Component {
                 <Col offset={8} span={8}>
                     <br></br>
                     <Card title="Create your subdomain" style={{ width: "100%" }}>
-                        <Create CreateDomain={(data) => this.handleCreate(data)} abc="bcd" />
+                        <Create CreateDomain={(data) => this.handleCreate(data)} />
                     </Card>
                 </Col>
             </Row>

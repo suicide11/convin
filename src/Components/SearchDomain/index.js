@@ -10,12 +10,14 @@ import {
 import search from '../../api/SearchDomain/index'
 import URL from '../../api/rootURL'
 class SearchDomainIndex extends Component {
+
     handleSearch=(data)=>{
         console.log(data);
         const fullURL = URL+'domains/availability?name='+data['domain']
         search(fullURL)
         .then((response)=>{
             console.log(response)
+            alert(response.data.message)
         })
         .catch((error)=>{
             console.log(error);

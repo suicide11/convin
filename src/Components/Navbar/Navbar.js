@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import 'antd/dist/antd.css';
 import img from '../../logo.svg'
 import { Menu, Icon } from 'antd';
-
+import { BrowserRouter, Route, Link } from "react-router-dom";
 const { SubMenu } = Menu;
 
 class Navbar extends React.Component {
@@ -26,16 +26,22 @@ class Navbar extends React.Component {
           Project
         </Menu.Item>
         <Menu.Item key="search" >
-          <Icon type="search" />
+         <a href="/search">
+         <Icon type="search" />
           Search Domain
+         </a>
         </Menu.Item>
         <Menu.Item key="deploy" >
-          <Icon type="appstore" />
+         <a href="/create">
+         <Icon type="appstore" />
           Create
+         </a>
         </Menu.Item>
         <Menu.Item key="user">
+          <a href="/">
           <Icon type="user" />
           Login
+          </a>
         </Menu.Item>
       </Menu>
     );

@@ -45,10 +45,7 @@ class UserIndex extends Component {
     console.log(data);
     const fullURL = 'https://'+ data['domain'] +'.api.convin.ai/persons/create_admin/'
     console.log(fullURL);
-    data.primary_phone="+"+data.prefix+data.primary_phone;
-    delete data.confirm;
     delete data.domain;
-    delete data.prefix
     console.log(data)
     Login(fullURL,data)
       .then((response) => {
